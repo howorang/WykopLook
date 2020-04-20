@@ -1,6 +1,7 @@
 ﻿<Page
     x:Class="WykopLook.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:WykopLook"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -9,6 +10,34 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+
+            <muxc:TreeView Grid.Column="0">
+                <muxc:TreeView.RootNodes>
+                    <muxc:TreeViewNode Content="Account">
+                        <muxc:TreeViewNode.Children>
+                            <muxc:TreeViewNode x:Uid="Inbox"/>
+                            <muxc:TreeViewNode x:Uid="Draft"/>
+                            <muxc:TreeViewNode x:Uid="Sent"/>
+                            <muxc:TreeViewNode x:Uid="Removed"/>
+                            <muxc:TreeViewNode x:Uid="Archived"/>
+
+                        </muxc:TreeViewNode.Children>
+                    </muxc:TreeViewNode>
+                </muxc:TreeView.RootNodes>
+            </muxc:TreeView>
+        </Grid>
 
     </Grid>
 </Page>

@@ -2,6 +2,11 @@
     x:Class="WykopLook.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:WykopLook">
+    xmlns:local="using:WykopLook"
+    RequestedTheme="Light">
+
+    <Application.Resources>
+        <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+    </Application.Resources>
 
 </Application>
